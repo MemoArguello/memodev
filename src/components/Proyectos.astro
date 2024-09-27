@@ -3,19 +3,23 @@ import ProyectosItem from "./ProyectosItem.astro"
 
 const PROYECTOS = [
     {
-        title: "Repositorio Web",
-        descripcion: "repositorio para una facultad",
+        title: "upsanignacio.edu.py",
+        descripcion: "Sitio web educativo desarrollado para la Universidad Católica Unidad Pedagogica San Ignacio Guazú misiones. Hecho con Laravel",
         link: "#",
         date: "2024",
-    }
+        img: "/images/proyecto2.webp",
+    },
+    {
+        title: "masfutbolpy.com",
+        descripcion: "Pagina web informativa de noticias de futbol paraguayo, estadisticas y mercado de fichajes en tiempo real del futbol Paraguayo",
+        link: "#",
+        date: "2024",
+        img: "/images/proyecto1.webp",
+    },
 ]
 ---
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    {
-        PROYECTOS.map(experiencia => (
-            <li class="mb-10 ms-4">
-                <ProyectosItem {... experiencia}/>
-            </li>
-        ))
-    }
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {PROYECTOS.map(proyecto => (
+        <ProyectosItem {...proyecto} />
+    ))}
 </div>

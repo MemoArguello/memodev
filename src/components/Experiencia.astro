@@ -1,0 +1,15 @@
+---
+import ExperienciaItem from "./ExperienciaItem.astro"
+
+const EXPERIENCIAS = [
+    {
+        date: "2024 - Presente",
+        title: "Freelancer",
+        descripcion: "Durante el último año, he trabajado como desarrollador backend independiente, especializándome en la creación de aplicaciones WEB utilizando PHP y Laravel.",
+        link: "#",
+    },
+]
+---
+{EXPERIENCIAS.map(experiencia => (
+            <ExperienciaItem {...experiencia} />
+))}

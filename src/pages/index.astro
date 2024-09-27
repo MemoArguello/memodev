@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Proyectos from '../components/Proyectos.astro';
+import Experiencias from '../components/Experiencia.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Badge from '../components/Badge.astro';
 import LinkedinIcon from '../icons/Linkedin.astro';
 import GithubIcon from '../icons/Github.astro';
 import EmailIcon from '../icons/Email.astro';
 import JobsIcon from '../icons/JobsIcon.astro';
+import ExperiencieIcon from '../icons/ExperienceIcon.astro';
 import Social from '../components/Social.astro';
 
 ---
@@ -14,19 +16,18 @@ import Social from '../components/Social.astro';
 <Layout title="Portfolio de MemoArguello - Desarrollador y Programador Backend"
 		descripcion='Desarrollador Backend Junior con Experiencia en Laravel y PHP Además de Experiencia en Análisis de Datos Enfocado en el Fútbol.'
 >
-<main>
+<main class="px-2">
 	<SectionContainer class="py-44 pb-24">
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-				Hi 👋, I'm MemoArgüello <a 
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hola 👋, Soy MemoArgüello <a 
 				href="https://github.com/MemoArguello" 
 				target="_blank" 
 				rel="noopener" 
 				class="flex justify-center items-center"
 				>
-				<Badge/>
 			</a>
 		</h1>
-			<h2 class="text-2xl text-wrap">
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span class="opacity-80">Desarrollador Backend Junior con</span>
 				<span class="text-yellow-200/90 opacity-80">Experiencia en Laravel y PHP</span><span class="opacity-80">
 					Además de Experiencia en 
@@ -34,28 +35,36 @@ import Social from '../components/Social.astro';
 				</span>
 			</h2>
 
-			<nav class="flex gap-x-4 mt-5">
+			<nav class="flex gap-4 mt-5 flex-wrap">
 				<Social href="https://www.linkedin.com/in/guillermo-arg%C3%BCello-cordob%C3%A9s-ba02b71b5/">
-					<LinkedinIcon class="size-6"/>
+					<LinkedinIcon class="size-4 lg:size-6"/>
 					LinkedIn
 				</Social>
 				<Social href="https://github.com/MemoArguello">
-					<GithubIcon class="size-6"/>
+					<GithubIcon class="size-4 md:size-6"/>
 					Github
 				</Social>
-				<Social href="https://github.com/MemoArguello">
-					<EmailIcon class="size-6"/>
+				<Social href="mailto:elmemozac6@gmail.com">
+					<EmailIcon class="size-4 md:size-6"/>
 					elmemozac6@gmail.com
 				</Social>
 			</nav>
 	</SectionContainer/>
 
-	<SectionContainer>
+	<SectionContainer id="proyectos">
 		<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
 			<JobsIcon class="size-8"/>
 			Proyectos
 		</h2>
 		<Proyectos/>
+	</SectionContainer/>
+
+	<SectionContainer class="mt-10" id="experiencias">
+		<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+			<ExperiencieIcon class="size-8"/>
+			Experiencias
+		</h2>
+		<Experiencias/>
 	</SectionContainer/>
 </main>
 </Layout>
